@@ -39,7 +39,29 @@ pip3 install 'pillow<7'
 # torch2trt
 cd $NANO_PILOT_DIR/share
 
-git clone https://github.com/NVIDIA-AI-IOT/torch2trt
+# git clone https://github.com/NVIDIA-AI-IOT/torch2trt
 cd torch2trt
 python setup.py install --plugins
+
+pip3 install termcolor
+
+# opencv
+cd $NANO_PILOT_DIR
+sed s/\\/home\\/jetson/$NANO_PILOT_DIR/g share/opencv/build/CMakeCache.txt
+sed s/\\/home\\/jetson/$NANO_PILOT_DIR/g share/opencv/build/CMakeVars.txt
+sed s/\\/home\\/jetson/$NANO_PILOT_DIR/g share/opencv/build/CMakeDownloadLog.txt
+cd $NANO_PILOT_DIR/share
+# git submodule add -f -b 4.5.1 https://github.com/opencv/opencv.git
+# git submodule add -f -b 4.5.1 https://github.com/opencv/opencv_contrib.git
+cd opencv
+
+sudo apt-get install libglew-dev libtiff5-dev zlib1g-dev libjpeg-dev libpng-dev libavcodec-dev libavformat-dev libavutil-dev libpostproc-dev libswscale-dev libeigen3-dev libtbb-dev libgtk2.0-dev pkg-config
+sudo apt-get install ccache libtesseract-dev libtesseract4
+sudo apt-get install libdc1394-22 libdc1394-22-dev
+
+mkdir -p build
+
+make -j3
+sudo make install
+sudo ldconfig
 
