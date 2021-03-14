@@ -37,7 +37,7 @@ cd ../
 pip3 install 'pillow<7'
 
 # torch2trt
-cd $NANO_PILOT_DIR/share
+cd $NANO_PILOT_DIR/share/third/
 
 # git clone https://github.com/NVIDIA-AI-IOT/torch2trt
 cd torch2trt
@@ -47,10 +47,14 @@ pip3 install termcolor
 
 # opencv
 cd $NANO_PILOT_DIR
-sed s/\\/home\\/jetson/$NANO_PILOT_DIR/g share/opencv/build/CMakeCache.txt
-sed s/\\/home\\/jetson/$NANO_PILOT_DIR/g share/opencv/build/CMakeVars.txt
-sed s/\\/home\\/jetson/$NANO_PILOT_DIR/g share/opencv/build/CMakeDownloadLog.txt
-cd $NANO_PILOT_DIR/share
+sed s/\\/home\\/jetson\\/share/$NANO_PILOT_DIR/\\/share\\/third/g share/opencv/build/CMakeCache.txt
+sed s/\\/home\\/jetson\\/share/$NANO_PILOT_DIR/\\/share\\/third/g share/opencv/build/CMakeVars.txt
+sed s/\\/home\\/jetson\\/share/$NANO_PILOT_DIR/\\/share\\/third/g share/opencv/build/CMakeDownloadLog.txt
+
+cp share/opencv/build/CMakeCache.txt share/third/opencv/build/CMakeCache.txt
+cp share/opencv/build/CMakeVars.txt share/third/opencv/build/CMakeVars.txt
+cp share/opencv/build/CMakeDownloadLog.txt share/third/opencv/build/CMakeDownloadLog.txt
+cd $NANO_PILOT_DIR/share/third
 # git submodule add -f -b 4.5.1 https://github.com/opencv/opencv.git
 # git submodule add -f -b 4.5.1 https://github.com/opencv/opencv_contrib.git
 cd opencv
