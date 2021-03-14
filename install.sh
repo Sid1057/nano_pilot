@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # apt update and environmetn create
 sudo apt-get update -y
 sudo apt-get install python3-venv -y
