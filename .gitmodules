@@ -1,11 +1,11 @@
 [submodule "share/torch2trt"]
 	path = share/torch2trt
 	url = https://github.com/NVIDIA-AI-IOT/torch2trt.git
-[submodule "share/opencv"]
-	path = share/opencv
+[submodule "share/third/opencv"]
+	path = share/third/opencv
 	url = https://github.com/opencv/opencv_contrib.git
 	branch = 4.5.1
-[submodule "share/opencv_contrib"]
-	path = share/opencv_contrib
+[submodule "share/third/opencv_contrib"]
+	path = share/third/opencv_contrib
 	url = https://github.com/opencv/opencv_contrib.git
 	branch = 4.5.1
