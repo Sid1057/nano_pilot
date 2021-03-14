@@ -23,3 +23,6 @@ As awesome as possible car based on jetson nano for the Carla simulator
 - build opencv 4.5.1 version with cuda support
 - install lots of deps and useful packages
 
+## useful tips and docs
+
+- [Different algorithms benchmark](https://github.com/Sid1057/nano_pilot/tree/master/benchmark)
