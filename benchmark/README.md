@@ -8,6 +8,7 @@
 
 **!NB**
 - half precision improves performance only when converting models to tensor
+- jetson was working in 20w power mode
 
 |Algorithm|fps|extra info|description|
 |--|--|--|--|
