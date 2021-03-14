@@ -3,7 +3,7 @@
 	url = https://github.com/NVIDIA-AI-IOT/torch2trt.git
 [submodule "share/third/opencv"]
 	path = share/third/opencv
-	url = https://github.com/opencv/opencv_contrib.git
+	url = https://github.com/opencv/opencv.git
 	branch = 4.5.1
 [submodule "share/third/opencv_contrib"]
 	path = share/third/opencv_contrib
